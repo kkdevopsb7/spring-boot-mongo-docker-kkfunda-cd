@@ -25,7 +25,7 @@ pipeline {
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding',
                                   credentialsId: 'aws-eks-cred']]) {
                     sh '''
-                        kubectl apply -f springappmongo.yaml --validate=false
+                        kubectl apply -f springBootMongo.yml --validate=false
                     '''
                 }
             }
